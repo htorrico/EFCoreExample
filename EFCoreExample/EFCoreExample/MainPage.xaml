@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EFCoreExample.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="txtName"></Entry>
+        <Entry x:Name="txtLastName"></Entry>
+        <Button x:Name="btnSave" Text="Save" Clicked="btnSave_Clicked"></Button>
+        <Button x:Name="btnShow" Text="Show" Clicked="btnShow_Clicked"></Button>
+        <ListView x:Name="lstViewPeople">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FirstName}"></Label>
+                            <Label Text="{Binding LastName}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
